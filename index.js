@@ -1,12 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongoose =  require("mongoose");
+const mongoose =  require("mongoose")
+
+const mongoURL = "mongodb+srv://madrigal1:earthbull1100@todolist-oi8yk.mongodb.net/test?retryWrites=true&w=majority";
 
 //setting up express
 const app = express();
 
 //connect to mododb
-mongoose.connect('mongodb://localhost/sandbox',{
+mongoose.connect(mongoURL,{
     useUnifiedTopology:true,
     useNewUrlParser:true
    }).then(() => {
