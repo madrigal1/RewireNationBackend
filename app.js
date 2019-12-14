@@ -26,8 +26,11 @@ app.use('/api',require('./routes/api.js'));
 app.use((err,req,res,next)=> {
   res.status(422).send({error:err.message});
 });
-
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 //server
-app.listen(process.env.PORT || 4000,()=> {
+app.listen(port,()=> {
     console.log("Server running !");
 });
