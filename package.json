@@ -5,7 +5,7 @@
   "main": "./bin/www",
   "description": "",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "engines": {
     "node": "8.5.0"
